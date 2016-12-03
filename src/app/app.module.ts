@@ -7,11 +7,16 @@ import { AppComponent } from './app.component';
 import { Tabs } from './tabs.component';
 import { Tab } from './tab.component';
 
+import { Tabs2 } from './tabs2.component';
+import { Tab2 } from './tab2.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     Tabs,
-    Tab
+    Tab,
+    Tabs2,
+    Tab2
   ],
   imports: [
     BrowserModule,
