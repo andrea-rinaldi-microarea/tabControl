@@ -10,18 +10,23 @@ import { Tab } from './tab.component';
 import { Tabs2 } from './tabs2.component';
 import { Tab2 } from './tab2.component';
 
+import { TagInputModule } from 'ng2-tag-input';
+import { TagInputSampleComponent } from './tag-input-sample.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     Tabs,
     Tab,
     Tabs2,
-    Tab2
+    Tab2,
+    TagInputSampleComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    TagInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
