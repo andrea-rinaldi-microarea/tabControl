@@ -19,4 +19,14 @@
   </tab2>
 </tabs2>
 
-<tag-input-sample></tag-input-sample>
+<tag-input-sample 
+  [allowedItems]="['Invoice', 'Delivery Note', 'Sale Order', 'Purchase Order']" 
+  placeholder="Enter one or more document"
+  hint="+document"
+></tag-input-sample>
+
+<tag-input-sample 
+  [allowedItems]="['Balance', 'Ledger cards', 'VAT returns', 'Journal Entries']" 
+  placeholder="use on these printed forms"
+  hint="+form"
+></tag-input-sample>

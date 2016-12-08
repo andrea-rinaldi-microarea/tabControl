@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+  /*.tb4-tag-input .ng2-tag__name {
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+
+  .tb4-tag-input .ng2-tag {
+    height: 28px;
+  }*/

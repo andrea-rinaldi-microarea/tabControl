@@ -1,39 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'tag-input-sample',
   template: `
-  <tag-input [(ngModel)]='items'
-            [placeholder]="options.placeholder"
-            [secondaryPlaceholder]="options.secondaryPlaceholder"
-            [maxItems]="options.maxItems"
-            [separatorKeys]="options.separatorKeys"
-            [onlyFromAutocomplete]="true"
-            [autocompleteItems]="options.autocompleteItems"
-            [autocomplete]="true">
-  </tag-input>
+  <div >
+    <tag-input
+        [(ngModel)]="items" 
+        [placeholder]="hint"
+        [secondaryPlaceholder]="placeholder"
+        [onlyFromAutocomplete]="true"
+        [autocompleteItems]="allowedItems"
+        [autocomplete]="true"
+    >
+    </tag-input>
+    </div>
   `,
-  styles: []
+  styles: [`
+    :host /deep/ .ng2-tag__name {
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 28px;
+    }
+
+    :host /deep/ .ng2-tag  {
+        height: 28px;
+    }
+  `]
 })
-export class TagInputSampleComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class TagInputSampleComponent {
+    @Input() allowedItems : string[];
+    @Input() placeholder : string;
+    @Input() hint : string;
 
     items = [];
-    options = {
-        placeholder: "+ document",
-        secondaryPlaceholder: "Enter a new document",
-        separatorKeys: [4, 5],
-        autocompleteItems : ['Invoice', 'Delivery Note', 'Sales Order', 'Purchase Order']
-    }
-    onItemAdded(item) {
-        console.log("${item} has been added");
-    }
-    onItemRemoved(item) {
-        console.log("${item} has been removed");
-    }
-
 }
